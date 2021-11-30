@@ -23,7 +23,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build and push schemers/sagittarius:0
-        id: docker_build
+        id: docker_build_0
         uses: docker/build-push-action@v2
         with:
           push: true
@@ -31,7 +31,7 @@ jobs:
           file: 0/Dockerfile
       -
         name: Build and push schemers/sagittarius:head
-        id: docker_build
+        id: docker_build_head
         uses: docker/build-push-action@v2
         with:
           push: true
