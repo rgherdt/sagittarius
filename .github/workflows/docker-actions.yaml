@@ -30,21 +30,21 @@ jobs:
         id: docker_build_0
         uses: docker/build-push-action@v2
         with:
-          registry: ${{ REGISTRY }}
+          registry: ${{ env.REGISTRY }}
           push: true
           context: 0/
           tags: |
-            ${{ IMAGE }}:0
-            ${{ IMAGE }}:0-bullseye-slim
-            ${{ IMAGE }}:latest
+            ${{ env.IMAGE }}:0
+            ${{ env.IMAGE }}:0-bullseye-slim
+            ${{ env.IMAGE }}:latest
 
         name: Build and push schemers/sagittarius:head
         id: docker_build_head
         uses: docker/build-push-action@v2
         with:
-          registry: ${{ REGISTRY }}
+          registry: ${{ env.REGISTRY }}
           push: true
           context: head/
           tags: |
-            ${{ IMAGE }}:head
-            ${{ IMAGE }}:head-bullseye-slim
+            ${{ env.IMAGE }}:head
+            ${{ env.IMAGE }}:head-bullseye-slim
