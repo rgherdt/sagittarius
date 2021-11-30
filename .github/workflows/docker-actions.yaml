@@ -37,7 +37,7 @@ jobs:
             ${{ env.IMAGE }}:0
             ${{ env.IMAGE }}:0-bullseye-slim
             ${{ env.IMAGE }}:latest
-
+      -
         name: Build and push schemers/sagittarius:head
         id: docker_build_head
         uses: docker/build-push-action@v2
