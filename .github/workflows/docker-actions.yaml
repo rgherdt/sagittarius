@@ -27,17 +27,18 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          image: rgherdt/sagittarius
-          directory: 0/
-          file: 0/Dockerfile
-          tags: 0, 0-bullseye-slim, latest
+          context: 0/
+          tags: |
+            rgherdt/sagittarius:0
+            rgherdt/sagittarius:0-bullseye-slim
+            rgherdt/sagittarius:latest
       -
         name: Build and push schemers/sagittarius:head
         id: docker_build_head
         uses: docker/build-push-action@v2
         with:
           push: true
-          image: rgherdt/sagittarius
-          tags: head, head-bullseye-slim
-          directory: head/
-          file: head/Dockerfile
+          context: head/
+          tags: |
+            rgherdt/sagittarius:head
+            rgherdt/sagittarius:head-bullseye-slim
