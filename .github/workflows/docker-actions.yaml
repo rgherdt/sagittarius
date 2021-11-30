@@ -28,7 +28,7 @@ jobs:
         with:
           push: true
           image: rgherdt/sagittarius
-          directory: 0
+          directory: 0/
           file: 0/Dockerfile
           tags: 0, 0-bullseye-slim, latest
       -
@@ -39,5 +39,5 @@ jobs:
           push: true
           image: rgherdt/sagittarius
           tags: head, head-bullseye-slim
-          directory: head
+          directory: head/
           file: head/Dockerfile
