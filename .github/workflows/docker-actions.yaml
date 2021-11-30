@@ -29,6 +29,7 @@ jobs:
           push: true
           image: rgherdt/sagittarius
           directory: 0
+          file: 0/Dockerfile
           tags: 0, 0-bullseye-slim, latest
       -
         name: Build and push schemers/sagittarius:head
@@ -39,3 +40,4 @@ jobs:
           image: rgherdt/sagittarius
           tags: head, head-bullseye-slim
           directory: head
+          file: head/Dockerfile
